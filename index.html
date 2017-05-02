@@ -155,33 +155,49 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-io" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-UDP-编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/01/io/">教程</a>
+      <a class="article-title" href="/2017/05/02/UDP-编程/">UDP-编程</a>
     </h1>
   
 
         
-        <a href="/2017/05/01/io/" class="archive-article-date">
-  	<time datetime="2017-05-01T04:59:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
+        <a href="/2017/05/02/UDP-编程/" class="archive-article-date">
+  	<time datetime="2017-05-02T14:08:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>生成的文章会存在于 Hexo\source_posts 目录下</li>
-<li>文章默认是一个.md的格式 , 意思它用的是 Markdown 语法 , 不知道的百度 , 关于语法的问题不知道的完了学 , , 先下载一个 Markdown编辑器</li>
-<li>Markdown 编辑器我喜欢用 Typora , 自行搜索下载</li>
-<li>如果不知道Markdown 的 语法写作 , 先随便在上面写点东西为了测试</li>
-<li>写完之后 Ctrl + S 保存</li>
-</ol>
+        <p>UDP编码 ：是一种无连接的传输协议，提供面向事物的简单的，不可靠的信息传递服务。</p>
+<p>​    1.无连接：是指不用像TCP那样的三次握手式的连接，把数据打包起来，每个包都给出目标的IP地址及端口号，这样每个包就可以自已在网络中去寻找目标计算机。</p>
+<p>​    2.简单的：例如接收和发送都使用DatagramSocket。</p>
+<p>​    3.不可靠的：是指在数据包发送之后是不用确定对方是否接收到，由于网络延时等原因，有一部分会丢失而不能到达目标电脑（例如游戏里的卡顿），由于每个包在网络中传输的路径不是一样的所以到达目标电脑的时间有可能也是不一样的，所以不适合对于准确度要求高的程序，但适合例如直播，游戏这类对于数据精确度不是很严格的程序。</p>
+<p>一，创建一个简单的服务端与客户端（单向）</p>
+<p>​    需求：服务端可以在客户端连接之后向客户端发送一句-欢迎登录-的语句。</p>
+<p>​    正常来说都是服务端先启动是这样的：</p>
+<p>​    服务端启动—-&gt;客户端启动—–&gt;服务端向客户端发送消息………..。</p>
+<p>​    由于我们是在服务器只发了一句话就结束了所以是这样的流程：</p>
+<p>​    客户端启动—-&gt;服务端启动—–&gt;服务端向客户端发送消息—&gt;结束。</p>
+<p>DatagramSocket  (创建客户端/创建服务端)</p>
+<p>DatagramPacket  (数据打包)</p>
+<p>.receive()  (读取数据) 例：ds.receive(dp);</p>
+<p>.send()      (发送数据)  例：ds.send(dp);</p>
+<p><img src="H:\githup\Hexo\新建文件夹\1.jpg" alt="1"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\2.jpg" alt="2"></p>
+<p>二，双向通信</p>
+<p> <img src="H:\githup\Hexo\新建文件夹\3.jpg" alt="3"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\4.jpg" alt="4"></p>
+<p>三，登录验证（发送对象）</p>
+<p> <img src="H:\githup\Hexo\新建文件夹\5.jpg" alt="5"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\6.jpg" alt="6"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\7.jpg" alt="7"></p>
 
       
 
@@ -194,55 +210,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/01/io/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-io - 副本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/01/io - 副本/">教程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/01/io - 副本/" class="archive-article-date">
-  	<time datetime="2017-05-01T04:59:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1234567</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/01/io - 副本/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/05/02/UDP-编程/">展开全文 >></a>
         </p>
       
 

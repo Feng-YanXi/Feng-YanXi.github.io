@@ -6,14 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Hexo</title>
+  <title>UDP-编程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="UDP编码 ：是一种无连接的传输协议，提供面向事物的简单的，不可靠的信息传递服务。 ​    1.无连接：是指不用像TCP那样的三次握手式的连接，把数据打包起来，每个包都给出目标的IP地址及端口号，这样每个包就可以自已在网络中去寻找目标计算机。 ​    2.简单的：例如接收和发送都使用DatagramSocket。 ​    3.不可靠的：是指在数据包发送之后是不用确定对方是否接收到，由于网络延">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UDP-编程">
+<meta property="og:url" content="http://yoursite.com/2017/05/02/UDP-编程/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="UDP编码 ：是一种无连接的传输协议，提供面向事物的简单的，不可靠的信息传递服务。 ​    1.无连接：是指不用像TCP那样的三次握手式的连接，把数据打包起来，每个包都给出目标的IP地址及端口号，这样每个包就可以自已在网络中去寻找目标计算机。 ​    2.简单的：例如接收和发送都使用DatagramSocket。 ​    3.不可靠的：是指在数据包发送之后是不用确定对方是否接收到，由于网络延">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/1.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/2.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/3.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/4.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/5.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/6.jpg">
+<meta property="og:image" content="h:/githup/Hexo/新建文件夹/7.jpg">
+<meta property="og:updated_time" content="2017-05-02T14:11:06.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="UDP-编程">
+<meta name="twitter:description" content="UDP编码 ：是一种无连接的传输协议，提供面向事物的简单的，不可靠的信息传递服务。 ​    1.无连接：是指不用像TCP那样的三次握手式的连接，把数据打包起来，每个包都给出目标的IP地址及端口号，这样每个包就可以自已在网络中去寻找目标计算机。 ​    2.简单的：例如接收和发送都使用DatagramSocket。 ​    3.不可靠的：是指在数据包发送之后是不用确定对方是否接收到，由于网络延">
+<meta name="twitter:image" content="h:/githup/Hexo/新建文件夹/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -153,49 +165,151 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-UDP-编程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/02/UDP-编程/" class="archive-article-date">
-  	<time datetime="2017-05-02T14:08:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/02/UDP-编程/">UDP-编程</a>
+    <h1 class="article-title" itemprop="name">
+      UDP-编程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2017/05/02/UDP-编程/" class="archive-article-date">
+  	<time datetime="2017-05-02T14:08:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>UDP编码 ：是一种无连接的传输协议，提供面向事物的简单的，不可靠的信息传递服务。</p>
+<p>​    1.无连接：是指不用像TCP那样的三次握手式的连接，把数据打包起来，每个包都给出目标的IP地址及端口号，这样每个包就可以自已在网络中去寻找目标计算机。</p>
+<p>​    2.简单的：例如接收和发送都使用DatagramSocket。</p>
+<p>​    3.不可靠的：是指在数据包发送之后是不用确定对方是否接收到，由于网络延时等原因，有一部分会丢失而不能到达目标电脑（例如游戏里的卡顿），由于每个包在网络中传输的路径不是一样的所以到达目标电脑的时间有可能也是不一样的，所以不适合对于准确度要求高的程序，但适合例如直播，游戏这类对于数据精确度不是很严格的程序。</p>
+<p>一，创建一个简单的服务端与客户端（单向）</p>
+<p>​    需求：服务端可以在客户端连接之后向客户端发送一句-欢迎登录-的语句。</p>
+<p>​    正常来说都是服务端先启动是这样的：</p>
+<p>​    服务端启动—-&gt;客户端启动—–&gt;服务端向客户端发送消息………..。</p>
+<p>​    由于我们是在服务器只发了一句话就结束了所以是这样的流程：</p>
+<p>​    客户端启动—-&gt;服务端启动—–&gt;服务端向客户端发送消息—&gt;结束。</p>
+<p>DatagramSocket  (创建客户端/创建服务端)</p>
+<p>DatagramPacket  (数据打包)</p>
+<p>.receive()  (读取数据) 例：ds.receive(dp);</p>
+<p>.send()      (发送数据)  例：ds.send(dp);</p>
+<p><img src="H:\githup\Hexo\新建文件夹\1.jpg" alt="1"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\2.jpg" alt="2"></p>
+<p>二，双向通信</p>
+<p> <img src="H:\githup\Hexo\新建文件夹\3.jpg" alt="3"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\4.jpg" alt="4"></p>
+<p>三，登录验证（发送对象）</p>
+<p> <img src="H:\githup\Hexo\新建文件夹\5.jpg" alt="5"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\6.jpg" alt="6"></p>
+<p> <img src="H:\githup\Hexo\新建文件夹\7.jpg" alt="7"></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/02/UDP-编程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+
+
+
+  
+  
+  
+
+  
+
+  
 
 
           </div>
@@ -218,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
